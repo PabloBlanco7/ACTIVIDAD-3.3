@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bmark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --color-primario: #005a9c;
+      --color-secundario: #f4f6f8;
+      --color-texto: #333;
+      --color-claro: #ffffff;
+      --espaciado: 1rem;
+      --borde-radio: 8px;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: var(--espaciado);
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+    }
+
+    header, footer {
+      background-color: var(--color-primario);
+      color: var(--color-claro);
+      padding: var(--espaciado);
+      text-align: center;
+      border-radius: var(--borde-radio);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: var(--espaciado);
+      justify-content: center;
+      background-color: #e6f0ff;
+      border-radius: var(--borde-radio);
+      margin: var(--espaciado) 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-primario);
+      font-weight: bold;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: var(--espaciado);
+    }
+
+    article {
+      background-color: var(--color-claro);
+      padding: var(--espaciado);
+      border-radius: var(--borde-radio);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    aside {
+      background-color: #f0f0f0;
+      padding: var(--espaciado);
+      border-radius: var(--borde-radio);
+      font-size: 0.9rem;
+    }
+
+    form {
+      margin-top: var(--espaciado);
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: var(--espaciado);
+    }
+
+    legend {
+      font-weight: bold;
+      color: var(--color-primario);
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: var(--espaciado);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Bmark</h1>
+    <p>Bienvenido a nuestro sitio</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="registro.html">Registro</a></li>
+    </ul>
+  </nav>
+
+  <main id="inicio">
+    <section>
+      <article>
+        <h2>Título del artículo</h2>
+        <p>Contenido del blog institucional...</p>
+        <img src="img.jpg" alt="Imagen ilustrativa del artículo" style="max-width:100%; border-radius:8px;">
+
+<form action="/procesar" method="post">
+  <fieldset>
+    <legend>Datos personales</legend>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" value="Pablo Emilio Blanco Garzón" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" value="3166160042" required pattern="[0-9]{7,10}" placeholder="Ej: 3123456789">
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" value="blancogpabloe@hotmail.com" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" value="Calle 123 #45-67, Girón" required>
+  </fieldset>
+</form>
+
+      </article>
+    </section>
+
+    <aside>
+      <h3>Contenido relacionado</h3>
+      <p>Para más información, visita el sitio institucional:  
+        <a href="https://www.ejemplo.com" target="_blank">www.ejemplo.com</a>
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Pie de página institucional © 2025</p>
+  </footer>
+
+</body>
+</html>
